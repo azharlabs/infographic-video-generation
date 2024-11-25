@@ -1,0 +1,101 @@
+:root {
+    --dark-bg: #1a1a1a;
+    --darker-bg: #121212;
+    --accent: #6c63ff;
+    --text: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+.workspace {
+    background: var(--dark-bg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.preview-panel {
+    background: var(--darker-bg);
+    background-size: cover;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.editor-panel {
+    background-color: var(--darker-bg);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.progress-bar {
+    background-color: var(--accent);
+    height: 4px;
+    transition: width 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.template-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    max-width: 100%;
+    /* overflow-x: auto; */
+}
+
+.template-card {
+    position: relative;
+    background-color: var(--darker-bg);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.tick-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+    background: var(--accent);
+    border-radius: 50%;
+    padding: 4px;
+    z-index: 10;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.template-card.active-template .tick-icon {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tick-icon svg {
+    display: block;
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.template-card:hover {
+    transform: scale(1.05);
+}
+
+.template-card.active-template {
+    border: 2px solid var(--accent);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}

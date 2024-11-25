@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#e8f5e9"/>
+  <path d="M100,200 Q200,100 300,200" stroke="#4caf50" stroke-width="3" fill="none"/>
+  <circle cx="200" cy="150" r="50" fill="#81c784" opacity="0.3"/>
+  <text x="200" y="155" font-family="Arial" font-size="16" fill="#2e7d32" text-anchor="middle">Nature Style</text>
+</svg>

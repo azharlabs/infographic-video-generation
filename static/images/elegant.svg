@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f8f5f0"/>
+  <rect x="60" y="60" width="280" height="180" fill="#ffffff" stroke="#8b7355" stroke-width="2"/>
+  <line x1="80" y1="140" x2="320" y2="140" stroke="#8b7355" stroke-width="1"/>
+  <text x="200" y="155" font-family="Georgia" font-size="16" fill="#4a4a4a" text-anchor="middle">Elegant Style</text>
+</svg>

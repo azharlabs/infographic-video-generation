@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#121212"/>
+  <rect x="70" y="70" width="260" height="160" fill="#1e1e1e" rx="5"/>
+  <circle cx="200" cy="150" r="40" fill="#82b1ff" opacity="0.3"/>
+  <text x="200" y="155" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Dark Style</text>
+</svg>

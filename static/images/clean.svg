@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f8f9fa"/>
+  <rect x="80" y="80" width="240" height="140" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+  <line x1="100" y1="140" x2="300" y2="140" stroke="#0d6efd" stroke-width="1"/>
+  <text x="200" y="155" font-family="Arial" font-size="16" fill="#212529" text-anchor="middle">Clean Style</text>
+</svg>

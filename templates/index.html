@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="workspace">
+    <div class="container-fluid py-4">
+        <div class="row">
+            <!-- Editor Panel -->
+            <div class="col-md-6">
+                <div class="editor-panel">
+                    <form enctype="multipart/form-data">
+                    <h2 class="mb-4">Create Infographic Video</h2>
+                    <div class="progress mb-4" style="height: 4px;">
+                        <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">CSV Upload (Optional)</label>
+                        <input type="file" id="csv-upload" class="form-control mb-3" accept=".csv">
+                        
+                        <label class="form-label">User Query</label>
+                        <textarea id="presentation-text" class="form-control bg-dark text-light" rows="3" 
+                                placeholder="Enter your presentation content..."></textarea>
+                    </div>
+                    <br>
+                    <div class="template-selector mb-6" >
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/workspace1.svg') }}" 
+                                 class="img-fluid mb-2" alt="Modern Template">
+                            <div class="text-center">Modern</div>
+                        </div>
+                        <!-- <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/workspace2.svg') }}" 
+                                 class="img-fluid mb-2" alt="Professional Template">
+                            <div class="text-center">Professional</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/minimal.svg') }}" 
+                                 class="img-fluid mb-2" alt="Minimal Template">
+                            <div class="text-center">Minimal</div>
+                        </div> -->
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/gradient.svg') }}" 
+                                 class="img-fluid mb-2" alt="Gradient Template">
+                            <div class="text-center">Gradient</div>
+                        </div>
+                        <!-- <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/corporate.svg') }}" 
+                                 class="img-fluid mb-2" alt="Corporate Template">
+                            <div class="text-center">Corporate</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/creative.svg') }}" 
+                                 class="img-fluid mb-2" alt="Creative Template">
+                            <div class="text-center">Creative</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/dynamic.svg') }}" 
+                                 class="img-fluid mb-2" alt="Dynamic Template">
+                            <div class="text-center">Dynamic</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/clean.svg') }}" 
+                                 class="img-fluid mb-2" alt="Clean Template">
+                            <div class="text-center">Clean</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/dark.svg') }}" 
+                                 class="img-fluid mb-2" alt="Dark Template">
+                            <div class="text-center">Dark</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/tech.svg') }}" 
+                                 class="img-fluid mb-2" alt="Tech Template">
+                            <div class="text-center">Tech</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/elegant.svg') }}" 
+                                 class="img-fluid mb-2" alt="Elegant Template">
+                            <div class="text-center">Elegant</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/future.svg') }}" 
+                                 class="img-fluid mb-2" alt="Future Template">
+                            <div class="text-center">Future</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/nature.svg') }}" 
+                                 class="img-fluid mb-2" alt="Nature Template">
+                            <div class="text-center">Nature</div>
+                        </div>
+                        <div class="template-card">
+                            <div class="tick-icon">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/business.svg') }}" 
+                                 class="img-fluid mb-2" alt="Business Template">
+                            <div class="text-center">Business</div>
+                        </div> -->
+                    </div>
+                    
+                    <button id="generate-btn" class="btn btn-primary">
+                        Generate Video
+                    </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Preview Panel -->
+            <div class="col-md-6">
+                <div class="preview-panel">
+                    <h3 class="mb-4">Preview</h3>
+                    <div class="text-center text-muted">
+                        Your video preview will appear here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/csv-handler.js') }}"></script>
+{% endblock %}
